@@ -1,0 +1,153 @@
+@charset "UTF-8";
+input, select, textarea {
+  color: #b0b0b0;
+}
+
+/* Fond sombre sur toute la zone "Messages": */
+.content-background-color {
+  background-color: #333;
+}
+
+.color-primary-font-color {
+  color: #b0b0b0;
+}
+
+.background-info-font-color {
+  background-color: #565454;
+}
+
+.background-primary-action-color {
+  background-color: #357096;
+}
+
+/* Pied de page (rédaction de messages): */
+.footer {
+  background: #333 !important;
+}
+.footer input, .footer select, .footer textarea {
+  color: #e0dede;
+}
+
+/* En-tête principal (avec le nom de channel): */
+.rc-header .rc-header__wrap {
+  color: #b0b0b0 !important;
+  background-color: #333 !important;
+}
+.rc-header .rc-header__name {
+  color: white !important;
+}
+
+/* Surbrillance des messages au passage de la souris: */
+.background-transparent-dark-hover {
+  transition: background-color 0.5s !important;
+}
+.background-transparent-dark-hover:hover {
+  background-color: rgba(255, 255, 255, 0.05) !important;
+}
+
+.background-primary-action-color {
+  background-color: #1f5c2f;
+}
+
+/* En-tête pour une nouvelle journée: */
+.message.new-day::before {
+  background-color: #333 !important;
+  color: #fff !important;
+}
+
+/* Pouces bleus: */
+.message .reactions > li {
+  border: 1px solid #838383 !important;
+  background-color: #4e4d4d !important;
+}
+
+/* Boutons à droite des messages: */
+.message-actions {
+  color: #ccc;
+}
+.message-actions .message-actions__button:hover {
+  color: #92b9f2;
+  /* color: var(--rc-color-button-primary); */
+}
+
+/* Menus: */
+.rc-popover__content {
+  border: 1px solid #646464;
+  background-color: #595959;
+}
+
+.rc-popover__item {
+  color: #cacaca;
+}
+.rc-popover__item:hover {
+  color: white;
+}
+
+.rc-table-body .rc-table-tr:hover {
+  background-color: #575757;
+}
+
+.rc-input__element {
+  color: #b0b0b0;
+}
+
+.rc-button {
+  color: #d6d6d6;
+  border-color: #d6d6d6;
+}
+.rc-button:disabled {
+  background-color: #666;
+  color: #999;
+}
+
+.rc-button--cancel.rc-button--outline {
+  color: #e9949f;
+  border-color: #e9949f;
+}
+
+.rc-form-legend {
+  color: #d6d6d6;
+}
+
+.pending-background {
+  background-color: #595959;
+}
+
+/* Sidebars: */
+.contextual-bar, .sidebar-light {
+  background-color: #595959 !important;
+}
+.contextual-bar.contextual-bar .rc-member-list__counter, .sidebar-light.contextual-bar .rc-member-list__counter {
+  color: #b0b0b0;
+}
+.contextual-bar.contextual-bar .attachments__name, .sidebar-light.contextual-bar .attachments__name {
+  color: #d6d6d6;
+}
+.contextual-bar.sidebar-light .sidebar-item:hover, .sidebar-light.sidebar-light .sidebar-item:hover {
+  background-color: #787863 !important;
+}
+.contextual-bar.sidebar-light .sidebar-item .sidebar-item__link, .sidebar-light.sidebar-light .sidebar-item .sidebar-item__link {
+  color: #d6d6d6;
+}
+
+.alert-warning {
+  color: #ffc503;
+  background-color: #656565;
+}
+
+.hljs, .code-colors {
+  color: #b0b0b0 !important;
+  background-color: #595959 !important;
+}
+.hljs .hljs-string, .code-colors .hljs-string {
+  color: #c28493 !important;
+}
+.hljs .hljs-number, .code-colors .hljs-number {
+  color: #2dbdbd !important;
+}
+.hljs .hljs-symbol, .code-colors .hljs-symbol {
+  color: #ef76d1 !important;
+}
+.hljs .hljs-selector-id, .code-colors .hljs-selector-id {
+  color: #cb7171 !important;
+}

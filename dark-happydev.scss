@@ -1,0 +1,182 @@
+
+$site-fg-color: #b0b0b0;
+$site-soft-fg-color: darken($site-fg-color, 30%);
+$site-bg-color: #333;
+$site-light-bg-color: lighten($site-bg-color, 15%);
+$site-disabled-fg-color: #999;
+$site-disabled-bg-color: #666;
+
+input, select, textarea {
+	color: $site-fg-color;
+}
+
+/* Fond sombre sur toute la zone "Messages": */
+.content-background-color {
+	background-color: $site-bg-color;
+}
+
+.color-primary-font-color {
+	color: $site-fg-color;
+}
+
+.background-info-font-color {
+	background-color: #565454;
+}
+
+.background-primary-action-color {
+	background-color: #357096;
+}
+
+/* Pied de page (rédaction de messages): */
+.footer {
+	background: $site-bg-color! important;
+
+	// Pour la rédaction des messages:
+	// (TODO: réduire le scope css?)
+	input, select, textarea {
+		color: #e0dede;
+	}
+}
+
+/* En-tête principal (avec le nom de channel): */
+.rc-header {
+	.rc-header__wrap {
+		color: $site-fg-color !important;
+		background-color: $site-bg-color !important;
+	}
+
+	.rc-header__name {
+		color: white !important;
+	}
+}
+
+/* Surbrillance des messages au passage de la souris: */
+.background-transparent-dark-hover {
+	transition: background-color 0.5s !important;
+	&:hover {
+		background-color: rgba(255, 255, 255, 0.05) !important;
+	}
+}
+
+.background-primary-action-color {
+	// background-color: #3f6c24;
+	background-color: #1f5c2f;
+}
+
+/* En-tête pour une nouvelle journée: */
+.message.new-day::before {
+	background-color: $site-bg-color !important;
+	color: #fff !important;
+}
+
+/* Pouces bleus: */
+.message .reactions > li {
+	border: 1px solid #838383 !important;
+	background-color: #4e4d4d !important;
+}
+
+/* Boutons à droite des messages: */
+.message-actions {
+	color: #ccc;
+	.message-actions__button:hover {
+		color: #92b9f2;
+		/* color: var(--rc-color-button-primary); */
+	}
+}
+
+/* Menus: */
+.rc-popover__content {
+	border: 1px solid $site-soft-fg-color;
+	background-color: $site-light-bg-color;
+}
+.rc-popover__item {
+	color: lighten($site-fg-color, 10%);
+	// color: var(--popover-item-color);
+	&:hover {
+		color: lighten($site-fg-color, 40%);
+	}
+}
+
+.rc-table-body .rc-table-tr:hover {
+	// var(--rc-color-primary-lightest)
+	background-color: #575757;
+}
+
+.rc-input__element {
+	color: $site-fg-color; // var(--input-text-color)
+}
+
+.rc-button {
+	color: lighten($site-fg-color, 15%);
+	border-color: lighten($site-fg-color, 15%);
+	&:disabled {
+		background-color: $site-disabled-bg-color; // var(--button-disabled-background)
+		color: $site-disabled-fg-color; // var(--button-disabled-text-color)
+	}
+}
+
+.rc-button--cancel.rc-button--outline {
+	$color: #e9949f;
+	color: $color;
+	border-color: $color;
+}
+
+.rc-form-legend {
+	color: lighten($site-fg-color, 15%);
+}
+
+.pending-background {
+	background-color: $site-light-bg-color;
+}
+
+/* Sidebars: */
+.contextual-bar, .sidebar-light {
+	background-color: $site-light-bg-color !important;
+	
+
+	&.contextual-bar {
+		.rc-member-list__counter {
+			color: $site-fg-color;
+		}
+		.attachments__name {
+			color: lighten($site-fg-color, 15%);
+		}
+	}
+
+	&.sidebar-light {
+		.sidebar-item {
+			&:hover {
+				background-color: #787863 !important;
+			}
+			.sidebar-item__link {
+				color: lighten($site-fg-color, 15%);
+			}
+		}
+	}
+}
+
+// Messages d'alerte (déconnecté-e, etc...):
+.alert-warning {
+	color: #ffc503;
+	background-color: #656565;
+}
+
+// Zones de code:
+.hljs, .code-colors {
+	color: $site-fg-color !important;
+	background-color: $site-light-bg-color !important;
+
+	.hljs-string {
+		color: #c28493 !important;
+	}
+	.hljs-number {
+		color: #2dbdbd !important;
+	}
+	.hljs-symbol {
+		color: #ef76d1 !important;
+	}
+	.hljs-selector-id {
+		color: #cb7171 !important;
+	}
+}
+
