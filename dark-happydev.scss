@@ -1,5 +1,6 @@
 
 $site-fg-color: #b0b0b0;
+$site-light-fg-color: lighten($site-fg-color, 20%);
 $site-soft-fg-color: darken($site-fg-color, 30%);
 $site-bg-color: #333;
 $site-light-bg-color: lighten($site-bg-color, 15%);
@@ -84,6 +85,12 @@ input, select, textarea {
 	}
 }
 
+/* Édition des messages: */
+.rc-message-box__container.editing, .message.editing {
+	background-color: #56524a;
+	/* background-color: var(--message-box-editing-color); */
+}
+
 /* Menus: */
 .rc-popover__content {
 	border: 1px solid $site-soft-fg-color;
@@ -130,27 +137,40 @@ input, select, textarea {
 }
 
 /* Sidebars: */
-.contextual-bar, .sidebar-light {
+.contextual-bar, .sidebar-light, .rc-user-info-container, .rc-user-info-details {
 	background-color: $site-light-bg-color !important;
-	
+}
 
-	&.contextual-bar {
-		.rc-member-list__counter {
-			color: $site-fg-color;
+
+.contextual-bar {
+	.rc-member-list__counter {
+		color: $site-fg-color;
+	}
+	.attachments__name {
+		color: lighten($site-fg-color, 15%);
+	}
+	.rc-user-info-container {
+		color: $site-light-fg-color;
+		.rc-user-info-details__label {
+			color: white;
 		}
-		.attachments__name {
-			color: lighten($site-fg-color, 15%);
+		.rc-user-info-details__info {
+			color: #c3c3c3;
+		}
+		.chip-container__item, .chip-container li {
+			background-color: #444343;
+			/* background-color: var(--chip-background); */
 		}
 	}
+}
 
-	&.sidebar-light {
-		.sidebar-item {
-			&:hover {
-				background-color: #787863 !important;
-			}
-			.sidebar-item__link {
-				color: lighten($site-fg-color, 15%);
-			}
+.sidebar-light {
+	.sidebar-item {
+		&:hover {
+			background-color: #787863 !important;
+		}
+		.sidebar-item__link {
+			color: lighten($site-fg-color, 15%);
 		}
 	}
 }
