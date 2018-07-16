@@ -130,6 +130,32 @@ input, select, textarea {
   color: #d6d6d6;
 }
 
+.sidebar {
+  color: #3b3b3b;
+}
+.sidebar .sidebar-item--mention, .sidebar .sidebar-item--unread {
+  color: black;
+  font-weight: bold;
+}
+.sidebar .sidebar-item {
+  color: #606060;
+}
+.sidebar .sidebar-item.sidebar-item--active {
+  color: #d2d2d2;
+  font-weight: bold;
+}
+.sidebar .rooms-list__type {
+  color: #7f8183;
+}
+.sidebar .rooms-list__empty-room {
+  color: #787a7e;
+  /* color: var(--rooms-list-empty-text-color); */
+}
+.sidebar .sidebar__toolbar-button {
+  color: #626363;
+  /* color: var(--sidebar-item-text-color); */
+}
+
 .alert-warning {
   color: #ffc503;
   background-color: #656565;
